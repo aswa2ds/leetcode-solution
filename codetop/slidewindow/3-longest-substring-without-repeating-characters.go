@@ -1,4 +1,4 @@
-package codetop
+package slidewindow
 
 func lengthOfLongestSubstring(s string) int {
 	left, right := 0, 0

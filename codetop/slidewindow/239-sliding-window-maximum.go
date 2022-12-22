@@ -1,4 +1,4 @@
-package codetop
+package slidewindow
 
 // 这个问题有一个点，那就是，后进入滑动窗口中的较大数，会比在它之前的较小数后出窗口
 func maxSlidingWindow(nums []int, k int) []int {

@@ -1,4 +1,4 @@
-package codetop
+package slidewindow
 
 import (
 	"reflect"
