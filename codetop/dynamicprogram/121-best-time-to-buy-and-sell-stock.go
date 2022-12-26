@@ -1,6 +1,6 @@
 package dynamicprogram
 
-func maxProfit(prices []int) int {
+func maxProfit_i(prices []int) int {
 	maxP := 0
 	buy := prices[0]
 
