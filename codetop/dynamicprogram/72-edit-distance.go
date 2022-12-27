@@ -3,7 +3,7 @@ package dynamicprogram
 func minDistance(word1 string, word2 string) int {
 	cols := len(word2) + 1
 	dp := make([]int, cols)
-	lefttop := 0
+	leftTop := 0
 	for i := range dp {
 		dp[i] = i
 	}
@@ -18,17 +18,12 @@ func minDistance(word1 string, word2 string) int {
 	}
 
 	for row := range word1 {
-		lefttop = dp[0]
-		dp[0] = row + 1
+		leftTop, dp[0] = dp[0], row+1
 		for col := range word2 {
 			if word1[row] == word2[col] {
-				tmp := lefttop
-				lefttop = dp[col+1]
-				dp[col+1] = tmp
+				leftTop, dp[col+1] = dp[col+1], leftTop
 			} else {
-				tmp := minOf3(dp[col], lefttop, dp[col+1]) + 1
-				lefttop = dp[col+1]
-				dp[col+1] = tmp
+				leftTop, dp[col+1] = dp[col+1], minOf3(dp[col], leftTop, dp[col+1])+1
 			}
 		}
 	}
