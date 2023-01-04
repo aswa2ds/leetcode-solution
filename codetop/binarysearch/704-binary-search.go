@@ -1,6 +1,6 @@
 package binarysearch
 
-func search(nums []int, target int) int {
+func searchI(nums []int, target int) int {
 	n := len(nums)
 
 	lo, hi := 0, n-1
